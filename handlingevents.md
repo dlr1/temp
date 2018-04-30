@@ -9,4 +9,10 @@ onclick
             Items++;
         }
 ```       
-
+Invoking actions
+```
+ public Action OnDismiss { get; set; }
+  void Dismiss()
+    {        
+        OnDismiss?.Invoke();     
+    }
