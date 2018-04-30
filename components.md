@@ -1,1 +1,14 @@
 communication between components
+
+Render Fragment
+```
+<div class="panel panel-success">
+    <div class="panel-heading">@Title</div>
+    <div class="panel-body">@ChildContent</div>
+</div>
+
+@functions {
+public string Title { get; set; }
+public RenderFragment ChildContent { get; set; }
+}
+```
