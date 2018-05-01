@@ -22,11 +22,12 @@ Optional parameters aren't supported
 ### Typed route parameters
 ```
 @page "/RouteParameter"
-@page "/RouteParameter/{text:string}"
-@page "/RouteParameter/{val:int}"
+@page "/RouteParameter/{Text:string}"
+@page "/RouteParameter/{Val:int}"
 <h1>Blazor is @Text!</h1>
 
 @functions {
-    public string Text { get; set; } = "fantastic";
+    public string Text { get; set; };
+    public int Val { get; set; };
 }
 ```
