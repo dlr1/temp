@@ -1,4 +1,4 @@
-Button
+### Button
 ```
   <button onclick="@IncrementCount">increment</button>
    public int Items { get; set; }
@@ -8,7 +8,7 @@ Button
         }
 ```
 
-Select
+### Select binding
 ```
  public enum Importance
     {
@@ -28,7 +28,7 @@ Select
                 }
     </select>
 ```            
-onchange
+### select onchange event
 ```
 public Action<string> OnSomeEvent { get; set; }
 public List<Customer> Customers { get; set; }
