@@ -39,3 +39,17 @@ public string Title { get; set; }
 public RenderFragment ChildContent { get; set; }
 }
 ```
+### creating component dynamically
+nicer APIs to build RenderFragments in the future, but for now 
+```
+@CreateDynamicComponent();
+
+@functions {
+    RenderFragment CreateDynamicComponent() => builder =>
+    {
+        builder.OpenComponent(0, typeof(SurveyPrompt));
+        builder.AddAttribute(1, "Title", "Some title");
+        builder.CloseComponent();
+    };
+}
+```
