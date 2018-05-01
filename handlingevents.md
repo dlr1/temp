@@ -1,6 +1,13 @@
-Events
+## Events
 
-onclick
+The list of supported event arguments is:
+
+UIEventArgs
+UIChangeEventArgs
+UIKeyboardEventArgs
+UIMouseEventArgs
+
+### onclick
 ```
 <button onclick="@IncrementCount">increment</button>
  public int Items { get; set; }
@@ -9,7 +16,7 @@ onclick
             Items++;
         }
 ```       
-Invoking actions
+### Invoking actions
 ```
  public Action OnDismiss { get; set; }
   void Dismiss()
