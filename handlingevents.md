@@ -15,6 +15,12 @@ UIMouseEventArgs
         {
             Items++;
         }
+```   
+
+### conditional event handling
+```
+ <input type="checkbox" bind="@handleClicks" />
+<button onclick="@((handleClicks ? (Action)IncrementCount : null))">Click me</button>
  @functions {
     int currentCount = 0;
     bool handleClicks = true;
@@ -30,12 +36,6 @@ UIMouseEventArgs
         StateHasChanged();
     }
 }
-```   
-
-### conditional event handling
-```
- <input type="checkbox" bind="@handleClicks" />
-<button onclick="@((handleClicks ? (Action)IncrementCount : null))">Click me</button>
 ```
 ### Invoking actions
 ```
