@@ -58,7 +58,7 @@ nicer APIs to build RenderFragments in the future, but for now
 
 child component
 ```
-@page "/coomp1"
+@page "/comp1"
 <button onclick="@clicked">click me</button>
 
 　
@@ -79,7 +79,7 @@ parent component
 @page "/"
 
 <mycomp OnMyEvent="@((Action<int>)myevent)"></mycomp>
-
+<mycomp OnMyEvent="@(e => { myevent(e); })"></mycomp>
 @functions{
 private void myevent(int value){
 Console.WriteLine(value);
