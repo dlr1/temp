@@ -53,3 +53,36 @@ nicer APIs to build RenderFragments in the future, but for now
     };
 }
 ```
+
+### Handling events from child components
+
+child component
+```
+@page "/coomp1"
+<button onclick="@clicked">click me</button>
+
+　
+@functions{
+[Parameter]
+private Action<int> OnMyEvent{get;set;}
+int val;
+    private void clicked()
+    {
+		val++;
+        Console.WriteLine(val);
+		OnMyEvent?.Invoke(val);
+    }
+}
+```
+parent component
+```
+@page "/"
+
+<mycomp OnMyEvent="@((Action<int>)myevent)"></mycomp>
+
+@functions{
+private void myevent(int value){
+Console.WriteLine(value);
+}
+}
+```
