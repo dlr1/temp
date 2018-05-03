@@ -7,8 +7,10 @@ UIChangeEventArgs
 UIKeyboardEventArgs
 UIMouseEventArgs
 
-### onclick
+### different ways to handle onclick
 ```
+<button onclick="alert('JS!')">Alert</button>
+<button onclick="@(() => Console.WriteLine("Called MyCSharpMethod"))">Alert</button>
 <button onclick="@IncrementCount">increment</button>
  public int Items { get; set; }
         protected void IncrementCount()
