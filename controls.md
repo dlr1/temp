@@ -45,3 +45,20 @@ public List<Customer> Customers { get; set; }
             OnSomeEvent?.Invoke(e.Value.ToString());
         }
 ```
+### checkbox
+```
+<input type="checkbox" bind="@IsChecked" />chk1
+<br />
+<input type="checkbox" bind="@IsChecked" />chk2
+
+<div style="@DivStyle()">this is some content, visible only when checkbox is checked</div>
+
+@functions{
+
+    public string DivStyle() {
+        return (IsChecked) ? "display:block" : "display:none";     
+    }
+    public bool IsChecked { get; set; }
+
+}
+```
