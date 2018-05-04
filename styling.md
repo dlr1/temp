@@ -16,4 +16,7 @@
         collapseNavMenu = !collapseNavMenu;
     }
 }
+
+
+<button class="btn btn-success @(SelectedID == todo.ID ? "ShowControl" : "HideControl")"> Update </button>
 ```
