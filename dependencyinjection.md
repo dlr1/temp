@@ -41,3 +41,17 @@ public class DataAccess : IDataAccess
     ...
 }
 ```
+### Getting stuff from IServiceProvider
+```
+@inject IServiceProvider Services
+
+@functions {
+    WeatherForecast[] forecasts;
+
+    protected override async Task OnInitAsync()
+    {
+        var client = Services.GetRequiredService<HttpClient>();
+        forecasts = await client.GetJsonAsync<WeatherForecast[]>("/sample-data/weather.json");
+    }
+}
+```
