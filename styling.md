@@ -17,6 +17,11 @@
     }
 }
 
-
 <button class="btn btn-success @(SelectedID == todo.ID ? "ShowControl" : "HideControl")"> Update </button>
+```
+### complex styles
+```
+<p onmouseover="@OnComponentHover" style="background: @ParentBgColor;" /> 
+public void OnComponentHover(UIMouseEventArgs e) {}
+
 ```
